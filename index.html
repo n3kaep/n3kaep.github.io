@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <title>Vitor | Cloud Portfolio</title>
@@ -12,6 +13,12 @@ body {
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top, #0f172a, #020617);
   color: white;
+}
+
+/* container */
+.container {
+  max-width: 1000px;
+  margin: auto;
 }
 
 /* navbar */
@@ -32,6 +39,7 @@ body {
 .hero {
   text-align: center;
   padding: 100px 20px 60px;
+  animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
@@ -50,6 +58,7 @@ body {
 .section {
   text-align: center;
   padding: 40px 20px;
+  animation: fadeIn 1.2s ease-in;
 }
 
 /* cards */
@@ -71,9 +80,9 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-10px);
   border-color: #38bdf8;
-  box-shadow: 0 0 25px rgba(56,189,248,0.2);
+  box-shadow: 0 0 30px rgba(56,189,248,0.3);
 }
 
 /* botão */
@@ -92,18 +101,48 @@ body {
   background: #0ea5e9;
 }
 
+/* linkedin button */
+.linkedin {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.linkedin:hover {
+  background: #38bdf8;
+  color: black;
+}
+
 /* footer */
 .footer {
   text-align: center;
   margin-top: 60px;
   padding: 20px;
   opacity: 0.5;
-  font-size: 14px;
+}
+
+/* animação */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 </style>
 </head>
 
 <body>
+
+<div class="container">
 
 <div class="nav">
   <div class="logo">Vitor Cloud</div>
@@ -111,14 +150,14 @@ body {
 
 <div class="hero">
   <h1>Vitor <span>Cloud</span></h1>
-  <p>Building real experience in cloud computing ☁️</p>
+  <p>Cloud computing student focused on AWS and real-world deployment ☁️</p>
 </div>
 
 <div class="section">
   <h2>About Me</h2>
   <p>
     I'm currently studying Systems Analysis and Development and focusing on cloud computing.
-    I’m building real-world experience using AWS services like EC2 and learning infrastructure fundamentals.
+    I build real-world projects using AWS services like EC2 and S3.
   </p>
 </div>
 
@@ -128,49 +167,49 @@ body {
   <div class="cards">
     <div class="card">
       <h3>EC2 Deployment</h3>
-      <p>Created and deployed a live website using AWS EC2 and Apache.</p>
+      <p>Deployed a live website using AWS EC2 and Apache.</p>
+    </div>
+
+    <div class="card">
+      <h3>S3 Hosting</h3>
+      <p>Configured AWS S3 for static website hosting.</p>
     </div>
 
     <div class="card">
       <h3>Cloud Learning</h3>
-      <p>Studying EC2, S3, networking, and cloud fundamentals.</p>
-    </div>
-
-    <div class="card">
-      <h3>Career Goal</h3>
-      <p>Focused on becoming a Cloud Engineer.</p>
+      <p>Studying networking, Linux, and cloud fundamentals.</p>
     </div>
   </div>
+</div>
 
-  <button class="btn">View More (coming soon)</button>
+<div class="section">
+  <h2>Architecture</h2>
+  <p>
+    This project uses AWS EC2 and S3 to deliver web applications with scalable cloud infrastructure.
+  </p>
+</div>
+
+<div class="section">
+  <h2>Skills</h2>
+  <p>
+    AWS (EC2, S3) • Linux • Networking • Cloud Fundamentals
+  </p>
 </div>
 
 <div class="section">
   <h2>Contact</h2>
   <p>Email: contatovitorg.alves@gmail.com</p>
+
+  <a class="linkedin" href="https://www.linkedin.com/in/vitor-gabriel-a04a36312/" target="_blank">
+    View LinkedIn
+  </a>
 </div>
 
 <div class="footer">
   © 2026 Vitor. All rights reserved.
 </div>
 
-</body>
-</html>
-<h2>Architecture</h2>
-<p>
-This project was deployed using AWS EC2 and S3. 
-The infrastructure includes a virtual server, static storage, and public access configuration.
-</p>
-<h2>Skills</h2>
-<p>
-AWS (EC2, S3) • Linux • Networking Basics • Cloud Fundamentals
-</p>
-<h2>GitHub</h2>
-<p>
-<a href="https://github.com/n3kaep">View my projects</a>
-</p> 
-<div class="card">
-  <h3>Static Website Hosting (S3)</h3>
-  <p>Configured AWS S3 bucket to host a static website with public access.</p>
 </div>
+
+</body>
 </html>
